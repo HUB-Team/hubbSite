@@ -1,0 +1,94 @@
+header,
+main,
+footer {
+  padding-left: 300px;
+}
+
+@media only screen and (max-width: 992px) {
+  header,
+  main,
+  footer {
+    padding-left: 0;
+  }
+}
+
+nav.top-nav {
+  height: 495px;
+  background-color: #9c27b0;
+}
+
+@media only screen and (max-width: 992px) {
+  nav.top-nav {
+    height: 300px;
+  }
+}
+
+.top-nav .container {
+  height: inherit;
+}
+
+a {
+  color: purple;
+}
+
+a.button-collapse.top-nav {
+  position: absolute;
+  text-align: center;
+  height: 48px;
+  width: 48px;
+  left: 0;
+  top: 20px;
+  float: none;
+  margin-left: 1.5rem;
+  color: #fff;
+  font-size: 36px;
+  z-index: 2;
+}
+
+a.page-title1 {
+  line-height: 300px;
+  font-size: 70px;
+}
+
+.container .nav-wrapper {
+  text-align: center;
+}
+@media only screen and (max-width: 992px){.container .nav-wrapper{
+  padding-top: 80px;
+  }}
+
+ul.team li a {
+  padding: 0 41px;
+}
+
+li.logo {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 130px;
+}
+
+.card .card-title {
+  font-size: 32px;
+}
+
+.card .card-content p {
+  font-size: 16px;
+  text-align: left;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+li.logo a:hover {
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 992px) {
+  a.page-title1 {
+    line-height: 130px;
+    font-size: 50px;
+  }
+}
+
+.cv {
+  margin-top: 200px;
+}
