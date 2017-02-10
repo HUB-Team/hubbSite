@@ -34,9 +34,7 @@ export default class Sidebar extends React.PureComponent {
     )
   }
   componentDidMount () {
-    $('.button-collapse').sideNav({
-      closeOnClick: true
-    })
+    $('.button-collapse').sideNav()
     $(this.refs.collapsible).collapsible({
       accordion: false,
       onOpen: function (el) { },

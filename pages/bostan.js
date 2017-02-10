@@ -23,13 +23,12 @@ export default class Bostan extends React.Component {
                 <li>
                   <div className="collapsible-header"><i className="mdi mdi-account-box small purple-text" />About</div>
                   <div className="collapsible-body">
-                    <p className="text">Bostan Ion
+                    <p className="text"><span><i className="mdi mdi-account small purple-text" /> Java Developer</span>
                       <span className="right">
                         <Link href="https://facebook.com/"><i className="mdi mdi-facebook-box small purple-text" /></Link>
                         <Link href="https://www.github.com/"><i className="mdi mdi-github-box small purple-text" /></Link>
                         <Link href="https://www.linkedin.com/"><i className="mdi mdi-linkedin-box small purple-text" /></Link>
                       </span></p>
-                    <p><span><i className="mdi mdi-account small purple-text" /> Java Developer</span></p>
                     <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
                     <p><i className="mdi mdi-phone purple-text" /> +373 (60) 111111</p>
                   </div>
