@@ -1,6 +1,14 @@
 import Link from 'next/link'
+import $ from 'jquery'
+console.log($.toString())
+
+console.log($('html'))
 
 export default class Sidebar extends React.PureComponent {
+    static async getInitialProps ({ req }) {
+    return { client: !!req.headers['user-agent']  }
+  }
+
   render () {
     return (
       <div>
@@ -11,7 +19,7 @@ export default class Sidebar extends React.PureComponent {
         </div>
         <ul id="nav-mobile" className="side-nav fixed">
           <li className="logo">
-            <Link href="/"><img src="/static/logo/hubbteam.png" alt="My Logo" /></Link>
+            <Link href="/"><a><img src="/static/logo/hubbteam.png" alt="My Logo" /></a></Link>
           </li>
           <li>
             <ul className="collapsible active" data-collapsible="accordion" ref="collapsible">
@@ -19,21 +27,22 @@ export default class Sidebar extends React.PureComponent {
                 <div className="collapsible-header"><i className="material-icons purple-text">group_work</i>Team</div>
                 <div className="collapsible-body" style={{padding: '0 10px'}} >
                   <ul className="active">
-                    <li><Link href="/horos">Grigorii Horos</Link></li>
-                    <li><Link href="/bumbu">Tudor Bumbu</Link></li>
-                    <li><Link href="/ungur">Stefan Ungur</Link></li>
-                    <li><Link href="/bostan">Ion Bostan</Link></li>
+                    <li><Link href="/horos"><a>Grigorii Horos</a></Link></li>
+                    <li><Link href="/bumbu"><a>Tudor Bumbu</a></Link></li>
+                    <li><Link href="/ungur"><a>Stefan Ungur</a></Link></li>
+                    <li><Link href="/bostan"><a>Ion Bostan</a></Link></li>
                   </ul>
                 </div>
               </li>
             </ul>
           </li>
-          <li><Link href="/contact">Contact</Link></li>
+          <li><Link href="/contact"><a>Contact</a></Link></li>
         </ul>
       </div>
     )
   }
   componentDidMount () {
+    if(this.props.client){
     $('.button-collapse').sideNav()
     $(this.refs.collapsible).collapsible({
       accordion: false,
@@ -41,6 +50,7 @@ export default class Sidebar extends React.PureComponent {
       onClose: function (el) { return false }
 
     })
+  }
   }
 
 }
