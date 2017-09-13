@@ -19,7 +19,7 @@ export default class Bostan extends React.Component {
           </nav>
           <div className="container">
             <div className="subimage">
-              <ul className="collapsible" data-collapsible="accordion">
+              <ul className="collapsible popout" data-collapsible="accordion">
                 <li>
                   <div className="collapsible-header"><i className="mdi mdi-account-box small purple-text" />About</div>
                   <div className="collapsible-body">

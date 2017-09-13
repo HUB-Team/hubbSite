@@ -1,8 +1,4 @@
 import Link from 'next/link'
-import $ from 'jquery'
-console.log($.toString())
-
-console.log($('html'))
 
 export default class Sidebar extends React.PureComponent {
     static async getInitialProps ({ req }) {

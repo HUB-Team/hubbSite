@@ -87,4 +87,5 @@ export default class Horos extends React.Component {
       $('.collapsible').collapsible()
     })
   }
+
 }
