@@ -1,12 +1,8 @@
 import Link from 'next/link'
-import $ from 'jquery'
-console.log($.toString())
-
-console.log($('html'))
 
 export default class Sidebar extends React.PureComponent {
-  static async getInitialProps ({ req }) {
-    return { client: !!req.headers['user-agent'] }
+    static async getInitialProps ({ req }) {
+    return { client: !!req.headers['user-agent']  }
   }
 
   render () {
@@ -42,14 +38,15 @@ export default class Sidebar extends React.PureComponent {
     )
   }
   componentDidMount () {
-    if (this.props.client) {
-      $('.button-collapse').sideNav()
-      $(this.refs.collapsible).collapsible({
-        accordion: false,
-        onOpen: function (el) { },
-        onClose: function (el) { return false }
+    if(this.props.client){
+    $('.button-collapse').sideNav()
+    $(this.refs.collapsible).collapsible({
+      accordion: false,
+      onOpen: function (el) { },
+      onClose: function (el) { return false }
 
-      })
-    }
+    })
   }
+  }
+
 }
